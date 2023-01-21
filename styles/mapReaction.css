@@ -1,0 +1,290 @@
+body {
+    background-color: #eaeaea;
+}
+
+.container,
+.map,
+.footer_card {
+    width: 320px;
+}
+
+.container {
+    margin: 0 auto;
+    padding-top: 20px;
+    height: 620px;
+    position: relative;
+}
+
+header,
+.footer_card {
+    background-color: #fff;
+}
+
+header {
+    height: 50px;
+}
+
+a.menu {
+    float: left;
+}
+
+a.search {
+    float: right;
+}
+
+a.menu,
+a.search {
+    margin: 10px;
+}
+
+.map {
+    border-top: 1px solid rgb(204, 203, 203);
+    background-image: url(/image/map/map.png);
+    background-size: cover;
+    height: 500px;
+}
+
+.map,
+.card,
+.rowline>a,
+.child:first-child>a {
+    background-repeat: no-repeat;
+}
+
+.rowline>a {
+    background-size: contain;
+}
+
+.card {
+    background-image: url(/image/map/card.svg);
+    margin-left: 142px;
+    margin-top: 110px;
+    width: 170px;
+    text-align: center;
+    height: 120px;
+    gap: 8%;
+    background-size: 100%;
+}
+
+.card,
+.footer_card,
+.text {
+    flex-direction: column;
+}
+
+.rowline,
+.rowline>a,
+.reactions,
+.child,
+.card,
+.footer_card,
+.text,
+.btn {
+    display: flex;
+}
+
+.half_stars,
+.btn>a {
+    text-align: center;
+}
+
+.half_stars .rating_group {
+    display: inline-flex;
+}
+
+.half_stars input {
+    left: -9999px;
+}
+
+.half_stars label {
+    margin: 0;
+    cursor: pointer;
+}
+
+.half_stars label svg {
+    margin: 8px;
+    height: 40px;
+    width: 40px;
+    transition: fill 0.3s;
+}
+
+.half_stars .hsr {
+    padding-right: 0;
+    margin-right: -29px;
+    width: 29px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.half_stars input:checked~label svg,
+.half_stars .rating_group input:hover~label svg {
+    fill: none;
+}
+
+.half_stars label svg,
+.half_stars .rating_group:hover label svg {
+    fill: #0126A8
+}
+
+.btn {
+    justify-content: space-around;
+}
+
+.btn>a {
+    border-radius: 20px;
+    border: 0;
+    width: 110px;
+    height: 38px;
+    background: #0126A8;
+    font-size: 18px;
+    color: #ebe6e6;
+    line-height: 38px;
+    text-decoration: none;
+}
+
+.btn>a:hover {
+    background: #5970c2;
+}
+
+.rowline,
+.reactions {
+    margin-left: 12px;
+}
+
+.rowline,
+.reactions,
+.btn {
+    flex-direction: row;
+}
+
+.rowline>a {
+    height: 20px;
+    width: 20px;
+    background-image: url(/image/map/active/Caret-left.svg);
+}
+
+.rowline>a:hover,
+.btn>a:hover,
+.child:first-child>a:hover {
+    zoom: 1;
+}
+
+.rowline>a:hover {
+    background-image: url(/image/map/active/Caret-left.svg);
+}
+
+.child {
+    margin-right: 10px;
+}
+
+.child:first-child>a {
+    padding-right: 4px;
+    background-image: url(/image/map/inactive/Star.svg);
+}
+
+.child:first-child>a:hover {
+    background-image: url(/image/map/active/Star.svg);
+}
+
+.footer_card {
+    height: 240px;
+    border-radius: 20px 20px 0 0;
+    justify-content: space-evenly;
+}
+
+.footer_card,
+.half_stars input {
+    position: absolute;
+}
+
+.footer_card {
+    bottom: 0.5%;
+}
+
+.card>h4,
+.rowline>h4,
+.child>h5,
+.text>h4,
+.text>h5 {
+    margin: 0;
+}
+
+.card>h4 {
+    padding-top: 5%;
+}
+
+.child:first-child>a,
+.reactions>.child>img {
+    width: 13px;
+    height: 13px;
+}
+
+.reactions>.child>img {
+    padding-right: 2px;
+}
+
+.reactions>.child {
+    align-items: center;
+}
+
+.location,
+.like,
+.star {
+    margin-right: 2px;
+}
+
+.location {
+    width: 11px;
+}
+
+.like {
+    width: 12px;
+}
+
+.star,
+.childs>img {
+    width: 14px;
+}
+
+.childs>h4 {
+    margin: auto 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    zoom: 1.05;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        width: 99%;
+        padding: 0;
+        min-height: 100vh;
+    }
+    header {
+        min-height: 10vh;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+    }
+    .footer_card {
+        min-height: 30vh;
+    }
+    .map,
+    .footer_card {
+        width: 100%;
+    }
+    .card {
+        margin-left: 40%;
+        margin-top: 30%;
+    }
+}
